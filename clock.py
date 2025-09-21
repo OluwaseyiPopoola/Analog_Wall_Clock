@@ -5,11 +5,12 @@ def main():
     t = turtle.Turtle()
     t.speed(0)
 
-    # Testing draw_circle method
-    # draw_circle(t, 0.80)
-    # draw_circle(t, 0.70)
-    # turtle.done()
-  
+    
+
+def draw_clock_frame(t: turtle.Turtle): 
+    """Draws the outer clock frame"""
+    draw_circle(t, 0.80)
+    draw_circle(t, 0.70)
 
 def draw_circle(t: turtle.Turtle, scale: int):
     
