@@ -1,12 +1,10 @@
+import turtle
+
+
 def main():
-
-
-
-
-
-
-
-
+    t = turtle.Turtle()
+    t.speed(0)
+  
 
 
 
