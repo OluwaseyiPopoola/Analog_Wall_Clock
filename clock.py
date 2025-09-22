@@ -3,8 +3,7 @@ import turtle
 
 def main():
     t = turtle.Turtle()
-    write_numbers(t)
-    turtle.done()
+    
 
 def write_numbers(t: turtle.Turtle):
     w = turtle.Screen().window_width()
