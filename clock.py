@@ -12,6 +12,7 @@ def main():
 
      
     draw_second_hand(t, time_now)
+    draw_minute_hand(t, time_now)
     turtle.done()
     
     
@@ -29,6 +30,22 @@ def draw_second_hand(t: turtle.Turtle, time_now: datetime):
     t.forward(radius)
     t.backward(radius)
     t.setheading(90)
+
+def draw_minute_hand(t: turtle.Turtle, time_now: datetime):
+    w = turtle.Screen().window_width()
+    h = turtle.Screen().window_height()
+    min_dim = min(w, h)
+    radius = (min_dim // 2) * 0.4
+
+    minute = time_now.minute 
+    angle_turned = (360 / (60)) * minute
+    
+    t.pensize(6)
+    t.right(angle_turned)
+    t.forward(radius)
+    t.backward(radius)
+    t.setheading(90)
+
 
 
 
