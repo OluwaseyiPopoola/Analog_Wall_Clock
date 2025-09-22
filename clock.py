@@ -3,8 +3,8 @@ import turtle
 
 def main():
     t = turtle.Turtle()
-    
-    
+    write_numbers(t)
+    turtle.done()
 
 def write_numbers(t: turtle.Turtle):
     w = turtle.Screen().window_width()
@@ -14,13 +14,15 @@ def write_numbers(t: turtle.Turtle):
     font_size = min_dim // 25
 
     t.penup()
-    t.setheading(90)  # Start pointing up
+    t.setheading(60)  # Start pointing up
 
     for i in range(1, 13):
         t.forward(radius - font_size)
         t.write(f"{i}", align="center", font=("Arial", font_size, "normal"))
         t.backward(radius - font_size)
         t.right(30)  # Move to next hour
+
+    t.setheading(90)
 
 
 def draw_clock_frame(t: turtle.Turtle): 
